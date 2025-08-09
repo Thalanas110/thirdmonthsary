@@ -55,6 +55,7 @@ export class PoemModal {
         // Update modal content
         document.getElementById('modal-title').textContent = poem.title;
         document.getElementById('modal-author').textContent = `by ${poem.author}`;
+        document.getElementById('modal-stanzas').textContent = `${poem.stanzas} stanza${poem.stanzas !== 1 ? 's' : ''}`;
         document.getElementById('modal-content').textContent = poem.content;
         
         // Update tags

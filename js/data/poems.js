@@ -1,523 +1,180 @@
-// Poems Database
+/*\
+This file includes all the poems. These are slated to be replaced--the
+current ones are AI-generated placeholders.
+*/
+
+// Utility function to count stanzas in a poem
+function countStanzas(content) {
+    // Split by double line breaks (paragraph separators) and filter out empty strings
+    return content.trim().split(/\n\s*\n/).filter(stanza => stanza.trim().length > 0).length;
+}
+
 export const poems = [
-    {
-        id: 1,
-        title: "Beneath the Starlit Dome",
-        author: "Elena Vasquez",
-        content: `Under the vast celestial canopy,
-Where silver stars in silence dance,
-We find ourselves in reverie,
-Lost in love's eternal trance.
-
-The moon, a beacon soft and bright,
-Illuminates our whispered dreams,
-While cosmic winds carry our plight
-Through space where nothing's as it seems.
-
-In this moment, time stands still,
-Two hearts beating as one,
-Against the universe's will,
-Our love story has begun.
-
-Each constellation tells a tale
-Of lovers brave and true,
-And though the world may grow pale,
-My heart belongs to you.`,
-        preview: "Under the vast celestial canopy, where silver stars in silence dance, we find ourselves in reverie...",
-        tags: ["love", "stars", "night", "romance", "cosmic"]
+        {
+        "id": 1,
+        "title": "Sa Tatlo ka Bulan nga Gugma",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa tion sang practicum, damo buluhaton ang naga-untat,\nApang sa tanan, ikaw ang nagapabilin sa akon hunahuna.\n\nKada aga nga naga-bangon ako, imo ngalan ang una ko ginahambal,\nBiskan laptop kag nota naga-demand sang akon oras kag kusog.\n\nDeadline nagahigpit, kape nag-aayo sang kabaskog,\nPero ang imo ngiti amo ang nagahatag sing kalipay.\n\nSa breakroom, samtang nagapanilag sang monitor,\nNagapangayo ako sang hulag sang imo tingog sa memorya ko.\n\nGinhawa ko sa kahidlaw, ginakonbinar ang assignments kag pangamuyo,\nKay may ara sang ginatawag nga paglaum — ikaw.\n\nIndì ko pirmi mabatian ang imo text, pero kabalo ako,\nNga nagasuporta ka sa akon bisan pa sa kalayo.\n\nSa kada test nga ginatubang ko, ginahuna-huna ko ang imo kamot,\nNga nagahuyop sang bugnaw sa kilid sang akon guya.\n\nAng mga papel nagahalin kag nagabalik, sugid-sugid sang stress,\nApang ang imo embrace sa damgo nagapawala sang kabug-atan.\n\nNagatan-aw ko sa oras, ginakolektar ang tiun,\nPara sa manggad nga mangin pila lang ka minuto upod ikaw.\n\nIndi perpekto ang akon schedule, indi sistemado,\nPero ang pagpalangga mo wala sing glitch kag error.\n\nKung magpungko ako sa computer hasta gab-i,\nAng imohang hulagway naga-aliwatsing kabahin sang screen sang akon dughan.\n\nGinasulat ko ang code kag ginapili ang words,\nSama sang pagpili sang mga pulong sang paghigugma ko sa imo.\n\nKon may problema ang device kag nagalupok ang patience,\nIkaw ang reminder nga indi ako magkuha sing shortcut sa aton pinalangga.\n\nKabay pa matapos ang practica kag mahanduraw ko ikaw sa personal,\nApang hasta subong, ginahulat ko ang aton reunion nga malipayon.\n\nSalamat guid sa imo pagsabot sa akon kakulangan sang oras,\nKag sa paghatag sang kusog nga nagapalig-on sa akon padayon.\n\nSa katapusan sang adlaw, bisan kapoy, nagapasalamat ako,\nKay ikaw ang rason nga nagatulon ang akon kalibutan sing kahulugan.",
+        "preview": "Sa tion sang practicum, damo buluhaton ang naga-untat, apang sa tanan, ikaw ang nagapabilin sa akon hunahuna...",
+        "tags": ["love", "practicum", "support", "longing"]
     },
     {
-        id: 2,
-        title: "Midnight Whispers",
-        author: "James Morrison",
-        content: `In the hush of midnight's embrace,
-When the world sleeps in peaceful dreams,
-I trace the contours of your face
-By moonlight's gentle, silver beams.
-
-Your breath, a melody so sweet,
-Mingles with the evening air,
-While shadows at our feet
-Dance without a single care.
-
-The night wind carries ancient songs
-Of lovers who have come before,
-Their passion lives on, strong and long,
-In hearts that yearn for something more.
-
-So let us write our story here,
-In stardust and in morning dew,
-A love that will persevere
-Beyond what mortal hearts can do.`,
-        preview: "In the hush of midnight's embrace, when the world sleeps in peaceful dreams...",
-        tags: ["night", "love", "whispers", "midnight", "romance"]
+        "id": 2,
+        "title": "Mga Handum sang Paghigugma",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Ginakulang ko ang imo mga kamot nga naga-upod sa akon gab-i.\nGinakulang ko ang imo tingog nga nagapangamusta sang akon adlaw.\n\nKada tan-aw ko sa litrato mo, nagasilak ang akon guya.\nBiskan simple lang, nagahatag sang init sa akon tagipusuon.\n\nAng distansya nagatugas sang kabug-atan sa dughan ko,\nPero ang paglaum nagapabilin, pareho sang adlaw sa aga.\n\nKadam-an sang oras ginapalibot sang trabaho kag klase,\nApang sa tagsa ka bakante nga minuto, ikaw ang akon ginapamangkot.\n\nNagapangayo ako sang kahilwayan kag kahupayan sa imo pangamuyo,\nKay ang imo pagtuo sa akon nagapabakod sa akon kalag.\n\nSa dalan, nakit-an ko ang mga butang nga nagapahanumdom sa imo,\nKag nagabalik ang mga halakhak kag ginpatihan naton nga handum.\n\nAng hambal mo nga 'hasta na lang' nagabitbit sang kahulugan,\nNga bisan sa kalayo, may hugot nga gapos ang aton estorya.\n\nBiskan wala ka, ang imo halakhak nagapuyo sa akon dulunan,\nNagahatag sang kusog nga magpadayon sa adlaw-adlaw nga agi.\n\nNagapaninguha ako nga magpabilin nga mabakud tungod sa imo,\nKay ikaw ang rason nga nagauswag ako bisan sa kasubo.\n\nSa ginhalukan sang hangin, ginahandum ko ang imo ngalan,\nKag sa bulan nga nagasilak, ginahilway ko ang akon mga pangamuyo.\n\nIndi ko malipatan ang adlaw nga nagtikang kita,\nKag nagatos ang buot ko nga maghulat tubtob sa pagbalik mo.\n\nGinakulang ka gid — sang kaayo kag sang kabuhi nga buot ko ipakita sa imo.\nSa pagbalik mo, mabatyagan ko liwat ang bug-os nga kalipay.\n\nBiskan ano pa ang maglabay, ikaw ang akon ginahandom,\nKag ang kahidlawan ko sa imo wala sing katapusan.",
+        "preview": "Ginakulang ko ang imo mga kamot nga naga-upod sa akon gab-i. Ginakulang ko ang imo tingog nga nagapangamusta sang akon adlaw...",
+        "tags": ["missing", "longing", "distance", "love"]
     },
     {
-        id: 3,
-        title: "Galaxy of Hearts",
-        author: "Sophia Chen",
-        content: `We are but specks in this vast space,
-Two souls among the countless stars,
-Yet in your eyes I find my place,
-A universe that heals all scars.
-
-Your love, a supernova bright,
-Explodes across my inner sky,
-Transforming darkness into light,
-Teaching my spirit how to fly.
-
-Through nebulae of hope we soar,
-Past planets made of crystalline tears,
-To find what we've been searching for:
-A love that conquers all our fears.
-
-In this galaxy of hearts we've made,
-Where every star's a memory dear,
-Our love will never ever fade,
-For infinity starts right here.`,
-        preview: "We are but specks in this vast space, two souls among the countless stars...",
-        tags: ["space", "love", "cosmic", "infinity", "stars"]
+        "id": 3,
+        "title": "Langit sa Imo Mata",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa sinugdanan sang adlaw, ginapanumpa ko ang paghigugma,\nIndi baylohon sang oras, indi masukot sang kasisidmon.\n\nBiskan magsulod ang unos kag pagkaulihi sang bulan,\nAng akon paghigugma sa imo padayon nga nagatubo.\n\nKung may maglapit kag maghambal nga indi ka angay,\nAko ang magpangayo sang rason para magpabilin ka.\n\nSa adlaw sang kasadya ukon sa tion sang kasubo,\nAko magahalin sa kilid mo, magahupot sang imo kamot.\n\nAng pulong 'basta' wala nagakahulugan sang kahaw-ang,\nKay sa likod sang 'basta' may paglaum kag pamatuod.\n\nGinapatuod ko sa imo nga wala sing kondisyon ang akon palangga,\nKag indi ko pagbalewalaon ang imo ginabatyag.\n\nSa kadalag-an sang imo kabuhi, upod ko magadayaw,\nSa kapirdihan, akon kamot ang magatuytoy sang pagbakod.\n\nIndi ko pag-iwan nga ang imo mga damgo magdula,\nKay ang akon pagpalangga nagapadayon bisan sa kagab-ihon.\n\nGinhimo ko ikaw nga puluy-an sang akon mga handum,\nKag ginaprotektahan ko ang imo ngalan sa akon kabuhi.\n\nSa adlaw-adlaw nga ginabayaw naton ang isa kag isa,\nNagatan-aw ako nga magtubo pa gid ang aton gugma.\n\nBiskan magliso pa ang kalibutan kag magbag-o ang dalan,\nSa imo gihapon ako magabalik — matinud-anon kag malig-on.\n\nAng akon paghigugma, pareho sang haligi, nagasalig sa imo,\nKag wala sing bagyo nga makabulos sini.\n\nKung nagapangduha-duha ka, pahimangnoan ta liwat ang tinutuyo,\nNga updanay naton ang tanan tubtob sa katapusan.\n\nSa pinaka hilum nga tion, ikaw ang akon pamalandong,\nKag sa pinaka matun-og nga adlaw, ikaw ang akon silong.\n\nHigugmaon taka sa tanan nga panahon—wala sing kahimtangan nga magbungkag sini.",
+        "preview": "Sa sinugdanan sang adlaw, ginapanumpa ko ang paghigugma, indi baylohon sang oras...",
+        "tags": ["unconditional", "devotion", "love"]
     },
     {
-        id: 4,
-        title: "Moonlit Serenade",
-        author: "Antonio Rodriguez",
-        content: `The moon serenades us tonight
-With silver notes on velvet strings,
-While we dance in its gentle light
-And dream of all that morning brings.
-
-Your hand in mine, so warm and true,
-Guides me through this waltz of time,
-Each step a promise, fresh and new,
-Each moment perfectly sublime.
-
-The stars above us seem to sing
-A melody of pure delight,
-As if the universe can bring
-Its blessing on this perfect night.
-
-So let us dance until the dawn
-Paints the sky in shades of gold,
-For this moment will live on
-Long after we've grown old.`,
-        preview: "The moon serenades us tonight with silver notes on velvet strings...",
-        tags: ["moon", "dance", "serenade", "night", "romance"]
+        "id": 4,
+        "title": "Handurawan sang Tatlo ka Bulan",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Isa ka bulan ang naglabay, kag nagadaku ang aton istorya.\nKada adlaw may bag-o nga rason para magpanginbulahan.\n\nSa aton lamisa, nagapuno sang mga kape kag halakhak,\nAng simple nga ritual naton nagapanghiwat sang dako nga kalipay.\n\nSa kada selebrasyon, ginahugpong naton ang mga handum,\nKag ginapanumpa ang pagpadayon sang pagpalangga.\n\nIndi kinahanglan màhal nga regalo, kay ang panahon nga upod ka, bilidhon.\nGani cheers sa bulan nga ini nga puno sang pag-intindi.\n\nSa mga adlaw nga may pagtilaw, nagabato kita pareho,\nSa gab-i, nagapuli ang kalipay kag nagahupay ang kabug-atan.\n\nAng imo kamot akon dalangpan sa kalma kag kasanag,\nKag ang akon tingog, ikaw man ang ginapahupay.\n\nNagapasalamat ako sa mga gamay nga butang — texts, memes, plans,\nKay sa ila, nabatyagan ko nga ikaw tunay nga nagakilala sa akon.\n\nSa bawat bulan nga nagalabay, nagakadugang ang aton listahan sang mga alaala,\nMay mga sala, may mga katahum, kag mga handum nga natuman.\n\nCheers sa mga adlaw nga wala pa naton naagyan,\nKag sa mga plano nga sa sini nga bulan lang nagsugod.\n\nAng pagtilaw nagatudlo sa aton magpabakod kag magtinluanay,\nAng selebrasyon nagahatag sang rason nga magdayaw kag magpasalamat.\n\nPadayon ang paghugpong sang aton mga kamot sa tunga sang kasanag,\nBiskan diin pa dal-on sang kabuhi ang aton mga tiil.\n\nMag-inupdanay kita sa pagtan-aw sang palaabuton nga may paglaum,\nKag sa pag-create sang tradisyon nga tag-sa naton ginapanag-iya.\n\nSubong nga isa ka bulan na liwat, ginahimaya ko ang aton pag-upod,\nKag ginasaad ko nga padayon ko ikaw pagahigugmaon sang sinsero.\n\nCheers sa aton — sa isa ka bulan subong, kag sa madamo pa nga bulan nga masunod.",
+        "preview": "Isa ka bulan ang naglabay, kag nagadaku ang aton istorya. Kada adlaw may bag-o nga rason para magpanginbulahan...",
+        "tags": ["anniversary", "celebrate", "love", "together"]
     },
     {
-        id: 5,
-        title: "Stellar Embrace",
-        author: "Maya Patel",
-        content: `In the embrace of stellar fire,
-Where comets trace their ancient paths,
-We kindle our burning desire
-While the universe softly laughs.
-
-Your kiss, a meteor's swift caress,
-Ignites my soul with cosmic flame,
-In this celestial wilderness,
-Love needs no earthly name.
-
-We are stardust, you and I,
-Born from the same primordial dream,
-Destined to light up the sky
-With love's eternal gleam.
-
-So hold me close beneath these stars,
-Let's write our names in cosmic dust,
-For love like ours travels far
-Beyond the realm of mortal trust.`,
-        preview: "In the embrace of stellar fire, where comets trace their ancient paths...",
-        tags: ["stars", "cosmic", "embrace", "fire", "love"]
-    },
-    {
-        id: 6,
-        title: "Constellations of the Heart",
-        author: "David Thompson",
-        content: `Map the constellations of my heart,
-Each star a moment we have shared,
-From the very start
-You've been the answer to my prayer.
-
-The Big Dipper holds our first kiss,
-Orion guards our wedding day,
-The Southern Cross marks moments of bliss
-When words fail and love finds a way.
-
-In Cassiopeia's graceful curve
-I see the arch of your sweet smile,
-While Polaris helps me observe
-The true north of your loving style.
-
-These stellar patterns overhead
-Are nothing to the ones you've made
-Within my heart, where love has spread
-Like starlight that will never fade.`,
-        preview: "Map the constellations of my heart, each star a moment we have shared...",
-        tags: ["constellations", "heart", "love", "stars", "memories"]
-    },
-    {
-        id: 7,
-        title: "Nebula Dreams",
-        author: "Isabella Santos",
-        content: `In nebulae of pink and gold
-Where baby stars are born each night,
-I see our future unfold
-In colors pure and bright.
-
-Your love, a cosmic nursery
-Where dreams take shape and form,
-Creates a sweet symphony
-That keeps my spirit warm.
-
-Like hydrogen and stellar dust
-That swirl in space's gentle arms,
-Our hearts combine with perfect trust
-Protected from all harms.
-
-In this celestial ballet grand
-Where matter dances free,
-I take your loving hand
-And sail eternity.`,
-        preview: "In nebulae of pink and gold where baby stars are born each night...",
-        tags: ["nebula", "dreams", "cosmic", "birth", "love"]
-    },
-    {
-        id: 8,
-        title: "Phases of Love",
-        author: "Michael Chang",
-        content: `Like the moon in all her phases,
-Our love grows and wanes and grows,
-Sometimes hidden, sometimes blazes,
-But the constant current flows.
-
-In the new moon's dark embrace
-We plant seeds of hope and trust,
-In the crescent's gentle grace
-We learn love is more than lust.
-
-When the full moon lights the sky
-Our passion burns with stellar fire,
-And in the waning moon we cry
-For the beauty we desire.
-
-Yet through every phase we've known,
-Whether dark or shining bright,
-Our love has surely grown
-Into an eternal light.`,
-        preview: "Like the moon in all her phases, our love grows and wanes and grows...",
-        tags: ["moon", "phases", "cycles", "love", "eternal"]
-    },
-    {
-        id: 9,
-        title: "Cosmic Lullaby",
-        author: "Rachel Green",
-        content: `Sing me the lullaby of space,
-Where pulsars keep the rhythm true,
-And I will show you love's embrace
-In everything we say and do.
-
-The Milky Way's a gentle stream
-That carries all our hopes along,
-While distant quasars brightly beam
-The verses of our love song.
-
-Black holes cannot contain the light
-That radiates from hearts like ours,
-For love transcends the endless night
-And outshines all the brightest stars.
-
-So close your eyes and listen well
-To the music of the spheres,
-For our cosmic lullaby will tell
-Of love that lasts throughout the years.`,
-        preview: "Sing me the lullaby of space, where pulsars keep the rhythm true...",
-        tags: ["lullaby", "cosmic", "music", "space", "love"]
-    },
-    {
-        id: 10,
-        title: "Aurora of Affection",
-        author: "Thomas Wilson",
-        content: `Like aurora borealis bright
-That dances in the polar sky,
-Your love illuminates my night
-With colors that will never die.
-
-Green ribbons of your gentle care
-Flow through my atmospheric heart,
-While purple passion fills the air
-With beauty that's a work of art.
-
-The solar winds of your embrace
-Collide with my magnetic soul,
-Creating light in time and space
-That makes my broken spirit whole.
-
-This northern light of love we share
-Burns bright against the cosmic dome,
-A spectacle beyond compare
-That guides my wandering heart home.`,
-        preview: "Like aurora borealis bright that dances in the polar sky...",
-        tags: ["aurora", "light", "colors", "polar", "love"]
-    },
-    {
-        id: 11,
-        title: "Binary Stars",
-        author: "Sarah Kim",
-        content: `We orbit each other, you and I,
-Two stars locked in cosmic dance,
-Our gravitational hearts that bind
-Never left to chance.
-
-Sometimes we're close, sometimes apart,
-But always in each other's pull,
-Our binary system of the heart
-Makes both our lives more full.
-
-You are my red giant burning bright,
-I am your white dwarf, small but true,
-Together we illuminate the night
-With love's eternal hue.
-
-And when our stellar lives are done,
-We'll merge into a single light,
-Two souls becoming truly one
-In love's infinite might.`,
-        preview: "We orbit each other, you and I, two stars locked in cosmic dance...",
-        tags: ["binary", "stars", "orbit", "dance", "love"]
-    },
-    {
-        id: 12,
-        title: "Starlight Sonnet",
-        author: "Christopher Davis",
-        content: `When starlight kisses mountain peaks
-And paints the world in silver hues,
-I think of how your beauty speaks
-To every fiber of my soul's muse.
-
-The ancient light from distant suns
-Traveled for eons just to shine
-Upon this moment when two hearts become one
-And your sweet love becomes mine.
-
-Each photon carries cosmic truth:
-That love transcends both time and space,
-That in your arms I find my youth
-And in your eyes, eternal grace.
-
-So let the starlight be our guide
-Through all the darkness we may face,
-For with you always by my side
-I've found my true and rightful place.`,
-        preview: "When starlight kisses mountain peaks and paints the world in silver hues...",
-        tags: ["starlight", "sonnet", "mountains", "eternal", "love"]
-    },
-    {
-        id: 13,
-        title: "Celestial Waltz",
-        author: "Amanda Foster",
-        content: `In three-quarter time the planets dance
-Around their golden solar flame,
-While we, in our own cosmic trance,
-Move to music without name.
-
-Jupiter leads with stately grace,
-Mars follows with a fiery step,
-While Venus shows her lovely face
-And Saturn's rings their promise keep.
-
-But here on Earth, beneath the stars,
-We waltz to rhythms all our own,
-Our love song echoing near and far
-In frequencies as yet unknown.
-
-So take my hand and let us sway
-To the celestial symphony,
-For in this cosmic ballet
-We'll dance for all eternity.`,
-        preview: "In three-quarter time the planets dance around their golden solar flame...",
-        tags: ["waltz", "celestial", "dance", "planets", "music"]
-    },
-    {
-        id: 14,
-        title: "Meteor Shower of Memories",
-        author: "Roberto Silva",
-        content: `Tonight the sky is streaked with fire
-As meteors trace their fleeting paths,
-Each burning trail a heart's desire
-That illuminates and then passes.
-
-But unlike these celestial guests
-That blaze and fade in seconds few,
-The memories within my chest
-Of loving moments shared with you
-
-Will burn forever, bright and true,
-A constant shower of delight
-That paints my inner sky in hues
-Of gold and silver, pure and bright.
-
-So while these meteors disappear
-Into the vastness of the night,
-Our love-filled memories stay here
-To be my ever-burning light.`,
-        preview: "Tonight the sky is streaked with fire as meteors trace their fleeting paths...",
-        tags: ["meteor", "memories", "shower", "fire", "eternal"]
-    },
-    {
-        id: 15,
-        title: "Galactic Garden",
-        author: "Priya Sharma",
-        content: `In the garden of the galaxy
-Where star clusters bloom like flowers,
-I plant my love for you to see
-Through all the cosmic hours.
-
-Spiral arms unfurl like petals
-Of roses made of burning gas,
-While supernovas' brilliant metals
-Fertilize the starry grass.
-
-Your love, a greenhouse warm and bright,
-Nurtures seeds of hope and joy,
-Until they burst into the light
-That nothing can destroy.
-
-So let us tend this cosmic space
-Where love and stardust intertwine,
-For in this celestial embrace
-Your heart beats close to mine.`,
-        preview: "In the garden of the galaxy where star clusters bloom like flowers...",
-        tags: ["galaxy", "garden", "flowers", "cosmic", "nurture"]
-    },
-    {
-        id: 16,
-        title: "Quantum Entanglement",
-        author: "Alexander Petrov",
-        content: `Across the vast expanse of space
-Where distance seems to rule supreme,
-Our hearts share an entangled grace
-That makes all separation seem
-
-A mere illusion of the mind,
-For love operates on quantum rules:
-No matter what the space between,
-Connected hearts are never fools.
-
-When you are happy, I rejoice,
-When you are sad, my spirit weeps,
-This quantum bond gives love a voice
-That even light-years cannot keep
-
-From traveling instantaneously
-Between our intertwined souls,
-A force that works mysteriously
-To make two halves into one whole.`,
-        preview: "Across the vast expanse of space where distance seems to rule supreme...",
-        tags: ["quantum", "entanglement", "connection", "physics", "love"]
-    },
-    {
-        id: 17,
-        title: "Cosmic Canvas",
-        author: "Natalie Brooks",
-        content: `The universe is canvas wide
-Where God paints with stellar light,
-And on this cosmic backdrop I'd
-Write our love story burning bright.
-
-With comets' tails I'll pen your name
-Across the dark matter between,
-While quasars burst in brilliant flame
-To spell out words I've never seen.
-
-The Horsehead Nebula frames our vows,
-The Eagle's wings lift up our dreams,
-While red giants and white dwarfs house
-The verses of our love supreme.
-
-On this celestial canvas vast
-I'll paint our love to last and last,
-A masterpiece that will outlast
-The future and the distant past.`,
-        preview: "The universe is canvas wide where God paints with stellar light...",
-        tags: ["cosmic", "canvas", "art", "painting", "eternal"]
-    },
-    {
-        id: 18,
-        title: "Interstellar Message",
-        author: "Gabriel Martinez",
-        content: `I send my love on radio waves
-Across the cosmic dark to you,
-A message that the void can't save
-From reaching hearts forever true.
-
-Through pulsars' rhythmic beating drums
-And static of the cosmic wind,
-My love's sweet signal always comes
-To find the heart that's always been
-
-Tuned to the frequency of care
-That broadcasts from my very soul,
-A signal traveling through space bare
-To make two broken spirits whole.
-
-So listen with your heart's antenna
-To the music of the spheres,
-For my love's constant hosanna
-Will reach you through the cosmic years.`,
-        preview: "I send my love on radio waves across the cosmic dark to you...",
-        tags: ["interstellar", "message", "radio", "communication", "love"]
-    },
-    {
-        id: 19,
-        title: "Stardust Symphony",
-        author: "Victoria Chang",
-        content: `We are made of ancient stardust,
-Forged in furnaces of suns,
-Every atom speaks of trust
-Between the cosmic ones.
-
-Your carbon was born in the belly
-Of a giant star now gone,
-Your oxygen in the jelly
-Of a nebula at dawn.
-
-The iron in your blood once burned
-In supernovae bright,
-While your calcium was earned
-In stellar explosions' light.
-
-So when I hold you close to me
-I hold the universe entire,
-A stardust symphony
-Of cosmic love and fire.`,
-        preview: "We are made of ancient stardust, forged in furnaces of suns...",
-        tags: ["stardust", "symphony", "elements", "cosmic", "ancient"]
-    },
-    {
-        id: 20,
-        title: "Eternal Starlight",
-        author: "Jonathan Lee",
-        content: `Though stars may die and galaxies fade,
-Though black holes swallow light itself,
-The love that we together made
-Will outlast time's own shelf.
-
-For love exists beyond dimension,
-Beyond the grasp of physics laws,
-A force of pure intention
-That needs no earthly cause.
-
-When the last star burns away
-And the universe grows cold,
-Our love will still hold sway
-In stories yet untold.
-
-So fear not the entropy
-That threatens all we see,
-For love's infinity
-Will always, always be.`,
-        preview: "Though stars may die and galaxies fade, though black holes swallow light itself...",
-        tags: ["eternal", "starlight", "infinity", "time", "love"]
+        "id": 5,
+        "title": "Sa Pagsalubong sang Adlaw kag Gugma",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Pasensya guid sa mga adlaw nga indi ka ko natawhan.\nSa tion sang semester, ang oras naga-kidlap pareho ka bituon.\n\nDeadline nagasaludsod sang adlaw ko, nagakuha sang kusog,\nIndi ko ginahalin ang imo, pero ginasakitan sang trabaho ang akon damgo.\n\nSang gab-i, nagapanilag ako sa screen kag nagahunahuna sang imo,\nMga text mo nagakalibog sa lista sang mga ginahulat ko tubtob karon.\n\nKabalo ko sang kasakit nga nabatyag mo, kag ginasaad ko nga may pagbag-o,\nKay ang imo paghigugma indi angay pagbayaan sang kakulangan ko.\n\nPasensya sa mga promisa nga nadelay, sa mga istorya nga wala na tapos,\nImportante ka gid sa akon — mas labaw pa sa mga grado kag award.\n\nGani subong nga may gamay nga hilikuton, ginapa-ayo ko ang akon plano,\nAgud indi mo mabatyagan nga ikaw ginpabay-an.\n\nKabay pa nga masabtan mo ang kadasig sang akong pangabuhi,\nKay indi lang tinutuyo ang nagapaduso sa akon; ikaw man.\n\nSalamat sa paghulat kag sa paghatag sang segundo nga tsansa,\nIndi ako magsaylo sa imo nga hungod ukon handum.\n\nSa masunod nga sem, pangayuan ko ang imo guidance kag pag-ayo,\nKay indi ko gusto nga ang aton istorya maga-untat tungod sang kakulangan ko.\n\nPasensya sa mga gab-i nga naglabay nga wala ko ginreplyan dayon,\nApang kabalo ko nga ang imo pagsalig yara sa ibabaw sang tanan.\n\nGinahandom ko nga mahatagan ka sang dako nga panahon kag pagpakita,\nNga indi pag-ibanan sang trabaho ang aton pag-upod.\n\nTinguhaan ko nga mag-ayo sang sistema kag mangin mas presente,\nPara sa mga handum naton nga wala pa natuman.\n\nKabay pa nga sa mga smile kag halakhak naton subong, makita mo ang pagbag-o,\nKag batunon mo ang pasensya nga ginahatag ko sa imo gikan sa tinuod nga buot.\n\nSalamat guid sa pagsabot, sa pagpabilin, kag sa pagtuo sa akon,\nIkaw ang rason nga luyag ko mag-ayo kag mangin mas maayo.\n\nPasensya, kag palangga — indi ko na pagulipatan ang imo kabug-usan,\nKay ang aton istorya mas labaw pa sa bisan ano nga semester kag exam.\n\nSubong kag sa palaabuton, ginapanumpa ko nga hatagan ka sang panahon,\nKag indi na liwat nato pagbalewalaon ang aton ginpalangga.",
+        "preview": "Pasensya guid sa mga adlaw nga indi ka ko natawhan. Sa tion sang semester, ang oras naga-kidlap pareho ka bituon...",
+        "tags": ["apology", "busy", "school", "love"]
     }
+,
+    {
+        "id": 6,
+        "title": "Sulod sa Bag-ong Tuig-Eskwela",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa pag-abot sang bag-ong tuig-eskwela, nagahuptok kita sa kamot.\nMay mga bag-o nga libro, bag-o man nga pangandoy sa aton dughan.\nAng imo nga ngisi nagahatag sang kumpiyansa sa akon pagpanikasog.\nUpod ka, ang klase nagbukas sang pwertahan sang paglaum.\n\nNagapanglakaton kita sa koridor, kamot sa kamot, wala sing ginahadlok.\nAng tunog sang tambol kag huni sang bells nagahuyop sa aton pagtilaw.\nSa lecture sala, imo napisan nga pamati nagapabakod sang akon konsentrasyon.\nIkaw ang akon notes sa tinluan nga papel sang tagipusuon.\n\nSa breakout group, nagahimakas kita sa code kag projects nga nagdaug.\nGinastoryahan naton ang mga future plans samtang nagapanilhig sang idea.\nAng imo ideya naghatag sing halin sa klaro nga panan-aw ko.\nKag ako nagasulat sang mga lines nga ginahalungan sang aton pagtinlo.\n\nSa uma sang assignments, may gab-i nga nagaligid kag deadlines nagasunod.\nPero sa imo text nga \"Kaya mo na\" nagabalik ang akon pagtuo.\nAng kape kag late-night debugging nangin simple lang kon upod ikaw.\nIkaw ang break sa tunga sang heavy nga load sang curriculum.\n\nMay mga quiz nga gin-auhag ang pagpanumdum sang kabuhi sang una.\nGani ginahupot ko ang imo ulohan nga ginahatag mo sa akon support.\nAng imo tingog sa phone nagapawala sang kabug-aton nga nagatupa sa akon.\nNagahibi man ang laptop, pero ang aton pagbato nagapabilin.\n\nSa library, nagapanglingkod ta tupad, balingga ang pagtuon kag handum.\nImo gintudlo ang mga margin notes nga nagabulig sang akon hunahuna.\nNaga-istorya kita sang thesis ideas kag mga pipila ka posibilidad.\nAng imo hugot nga pagsalig nagahimo sang mga gamay nga milagro sa akon.\n\nGinaselebrar naton ang first passed exam sa simple nga snack sa dalan.\nAng kalipay naton nagasinggit nga may tsansa pa nga maglapad ang palaabuton.\nAng mga classmates nagatan-aw, pero ikaw lang ang akon ginapisan.\nKay sa imo presensya, ang mga grado nagakahulugan lamang sang pag-uswag.\n\nKung may group conflicts, ikaw ang nagapahamtang sang hutik sang kalinong.\nAng imo mga pulong, malumo pero may katumanan, nagabutang sang order.\nBiskan malisod, nalab-ot naton ang compromise nga may pagrespeto.\nSalamat sa imo pagtinlo sang aton relasyon samtang nagatinlo sang projects.\n\nSa intramurals, nagalakat kita nga may kamot nga nagakupot sa isa kag isa.\nAng kalipayan sa sidelines mas nag-asidlak tungod sa imo pag-upod.\nAng tagbaw nga halakhak naton nagabuka sang bag-ong koneksyon.\nAng school life ginpuno sang pagtamod kag mga simple nga ritwal.\n\nSa faculty day, nagtan-aw kita sang mga plano nga gusto naton suguran.\nMay handum kita sang kaugmaon nga ubos sang pareho naton nga prinsipyo.\nAng imo pagtilaw magbulig nga mangin maayo ako sa pagdesisyon.\nKag ako magatipon sang kusog para indi ka pagtalikdan sa amon dalan.\n\nSa mga late-night consultations, nagasuportahanay kita sa pagtuon.\nImo ginhatag ang imo oras bisan kapoy na ang lawas kag mata.\nAng pag-antos ko kag pag-uswag mo nangin pareho nga motor sang amon dalan.\nBilang team, ginbato naton ang tanang kagina sa isa ka hunos nga paglaum.\n\nMay adlaw sang palayag, nagaupod kita sa pag-volunteer kag outreach.\nNagpanagtag naton ang higayon para sa iban, ginbukas ang puso naton.\nAng imo pagkabuotan nagapakita nga indi lang kita nagatoon para sa self,\nKundi para man sa komunidad nga aton ginahingyo nga mag-ayo.\n\nSa midterms, ginbaton naton ang resulta nga may pag-ayo kag pagtuon liwat.\nKag bisan pa may failure, indi naton ginbase ang pagtilaw sa kabiguan.\nImo ginlahutay ang akon kaugalingon nga magbangon kag mag-ayos liwat.\nAng paghulat kag pagtuon naton nangin dakung teacher sa aton duha.\n\nNagplano kita sang summer internship, nga may kamot nga nagahuptok pa gid.\nAng oportunidad daw lapad, pero ang pagpili ginahimo naton upod.\nImo pangamuyo nga mangin responsable kag matinlo ang nagapukaw sa akon.\nBiskan sa ulihi, ang desisyon ginbase sa pag-intindi sang isa kag isa.\n\nSa graduation nga malapit na, ginapanumdum ko ang tanan nga adlaw naton.\nAng mga pagkakapoy kag pagpanikasog nagbunga sang lig-on nga pagtuo.\nAng school years nangin saksi sang aton pagbag-o kag pagdako.\nKag sa tanan nga ini, ikaw ang akon upod — ang pinili ko sa tanan.\n\nSubong, sa pagsugod sang bag-ong tuig-eskwela, nagapanumpa ako gihapon,\nNga sa kada subject kag lab, upod ikaw sa pag-atubang sang kabuhi.\nAng eskwelahan wala lang lugar sang kahibalo — isa man ka balay naton.\nKay sa sulod sini, kita nag-ugyon, nagatubo, kag nagahigugmaay sa isa kag isa.",
+        "preview": "Sa pag-abot sang bag-ong tuig-eskwela, nagahuptok kita sa kamot. May mga bag-o nga libro, bag-o man nga pangandoy sa aton dughan...",
+        "tags": ["school", "love", "partnership", "students"]
+    },
+    {
+        "id": 7,
+        "title": "Upod sa Pagsaka kag Paglubog",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Nagapalangga kita bisan pa sa mga pagsaka kag paglubog sang adlaw.\nMay adlaw nga taas, may adlaw man nga mababa ang aton espiritu.\nApang kada pag-untat, nagabalik kita sa kamot sang isa kag isa.\nAng gugma naton nagatinlu sa mga pilas kag naghahatag sang pag-ayo.\n\nSa tagsa ka momento nga nagataas ang kalipay, nagahugpong kita sing halakhak.\nAng kadalag-an nahimo nga handum nga ginaselebrar naton upod.\nNagapanumdum kita sang aton mga gamay nga milestones kag mga pasidungog.\nKay ang kalipay indi kumpleto kung indi naton pagbahin-bahin.\n\nMay mga tinion nga ang kabuhi nagatugas sang kasakit kag kabudlayan.\nNagahuyang ang mga bintana kag nagahuyop ang mabaskog nga hangin.\nPero sa imo presensya, nagakadul-ong sang kalipay ang akon dughan.\nIkaw ang payong nga nagaprotektar sa akon sang ulan sang kabudlay.\n\nSa pagkabuhi sang problema, ginpangitaan naton sang solusyon upod.\nAng pagbinuligay nagahimo sang mga bag-o nga plano kag estratehiya.\nImo nga pagtoo kag akon pagpangabudlay nagakaupod sa paglambo.\nAng aton relasyon nagatubo pinaagi sang pag-ayo sang isa kag isa.\n\nSa panahon sang disagreements, nagapaninguhang mag-inchindi.\nWala naton ginapas-an ang sala sang wala pag-istoryahanay.\nNagapamati guid kita, nagahatag oportunidad para sa pagbag-o.\nKag sa pagbalik sang katawhay, nagahalin ang mas malig-on nga pagpalangga.\n\nMay adlaw nga simple lang ang mga handum naton: kape sa aga kag ligid nga tawa.\nMay mga adlaw man nga dako ang handum — balay, pamilya, kag palaabuton.\nPero bisan ano pa ang dako ukon gamay, ginahuptan naton pareho.\nAng sinsero naton nga paghigugma nagapabakod sang amon pangabuhi.\n\nSa kada pagsaka, ginaselebrar naton ang mga nadangatan nga kusog.\nKag sa kada paglubog, nagapanundum kita sang mga leksyon nga nakuha.\nAng pagtuon naton sa kabuhi indi lang sa libro kundi sa aton eksperensya.\nGugma nga nabatyagan naton nagatulo sang kahulugan sa kada adlaw.\n\nAng mga iya-iyo nga lakang nagatudlo sang pagtuon sang pagpa-athag.\nImo kamot nagapangdugang sang kured sa akon kalibog kag kahadlok.\nKag ako man, bisan ugsaran, nagatipig sang imo kalipay kag handum.\nSa aton duwa, may synergy nga nagahimo sang kadalag-an.\n\nKung may bagyo nga mag-abot, indi naton pag-ayuhon nga magbulag.\nHawak kita sang pareho nga pagtuo kag nagapanindugan sa tunga sang kusog.\nAng paghalong naton sa isa kag isa nagahimo nga mas mabakod kita.\nKay ang pag-antos nagatulod nga mangin mas masanag ang aton paglaum.\n\nSa mga malip-ot nga higayon nga nagapanginwala kita, nagapangayo kita pasaylo.\nAng pasaylo nagaupod sang paghinugyaw kag pagtan-aw sang mas maayong buwas.\nWala sang ego nga nagadumili sa pag-ako sang sala kag pag-ayo.\nTungod sini, nagatul-id kag nagatubo ang aton relasyon sa husto.\n\nAng pagplano naton sang palaabuton indi ginahimo lang sa hunahuna,\nKundi ginapaligon sang aksyon kag pagtamod sa tagsa ka adlaw.\nNagapangayo kita sang mga gamay nga komitment nga may daku nga kahulugan.\nAng pagbulig kag pag-ugyon nagahimo sang steady nga pagtinlo sang puluy-an.\n\nMay mga adlaw nga magaabot ang kasubo gikan sa pamilya kag trabaho.\nApang nagasuporta kita sa isa kag isa, nagahatag sang space kag oras.\nIndi kita magpang-istorya nga dali lang ang tanan, kay ang kamatuoran lain.\nPero nagakahimo kita sang mga tipon nga nagahatag sang kusog kag paglaum.\n\nAng paglaum nagapadayon bisan sa malayo kag malapit nga distansya.\nKung may kalayo ang tanan, ang pagdumdum naton nagapalapit guid sa puso.\nAng technology nagabulig pero ang tinutuyo naton ang pinakaimportante.\nAng communication nga halin sa sinsero naton nga buot ang nagapasanyog.\n\nSa mga adlaw nga magpanginwala ang aton ti-on, nagapanumdum kita sang rason.\nNga ngaa nagpadayon kita — kay nakita naton ang pag-uswag kag pagbag-o.\nKag sa pagtul-id sang mga sayop, nagapakita ang mas mabaskog nga pag-intindi.\nAng relasyon naton indi perpekto pero may katutom kag kalipay.\n\nBilang katapusan, ginadayaw ko ang mga adlaw nga nag-upod kita.\nAng aton pag-inupdanay naghatag kahulugan sa tanan nga gin-antos.\nUpod sa pagsaka kag paglubog, upod man ang paglaum kag pag-ayo.\nKag ako magapadayon nga updan ka — sa tanan nga adlaw tubtob sa katapusan.",
+        "preview": "Nagapalangga kita bisan pa sa mga pagsaka kag paglubog sang adlaw. May adlaw nga taas, may adlaw man nga mababa ang aton espiritu...",
+        "tags": ["ups-and-downs", "commitment", "resilience", "love"]
+    },
+    {
+        "id": 8,
+        "title": "Wala Untat nga Tan-aw sa Imo Nawong",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Wala untat ang akon tan-aw sa imo nawong kada makita ta ikaw.\nAng imo mga mata nagasugid sang istorya nga indi masaysay sang pulong.\nSa imo ngisi nagahugpong ang gugma kag kalipay nga halin sa dako nga tinubdan.\nBiskan simple lang ang imo nawong, para sa akon, obra maestro sang langit.\n\nSa aga, ang imo mata naga-sidlak pareho sang una nga adlaw nga nagkilalahay kita.\nNagapangduyog ang hangin sa buhok mo kag ang mga bituon nagatawhay.\nGinatan-aw ko ang kurba sang imo pisngi, ang pagkusyaw sang imo kilay.\nBiskan wala ka nagasiling sing pulong, ang akon dughan nagasayaw kag nag-auhag.\n\nSa tunga sang klase, nagalantaw ako sa imo kag nagapanghiwat ang dughan.\nAng imo pagtan-aw sa chalkboard daw nagahatag sang art sa ordinaryo.\nKon mag-smile ka, nagakupot ang kalibutan sang isa ka segundo para sa aton.\nAng akon paminsaron nagikid sa imo, nagsulat sang mga lyric sang paghigugma.\n\nSa cafeteria, samtang nagapanilhig sang tray kag nagapanilag sa mga tawo,\nIkaw ang nagatulod sang iya nga katahum kag hindi ko malipatan.\nBiskan ang imo pagkaon simple lang, ang imo nawong nag-uyon sang katahum.\nNagahandum ako nga pirmi lang ako malapit sa sining simple nga ritual mo.\n\nSa gab-i, sa pagbalik sa dorm, ginareplay ko ang imo litrato sa akon screen.\nNagabalik-balik ang moment sang imo nawong sa akon damgo kag hunahuna.\nDaw gusto ko lang ipilit ang oras kag pahamtang sa kaugalingon ko.\nKay ang imo nawong, langga, amo ang pinaka komportable nga lugar sang akon mata.\n\nKung may problema kag kabudlay, ang panglantaw ko sa imo nawong nagahatag sang dako nga kusog.\nImo mga hitaot nga linya nagapahayag sang pag-intindi kag kabakod.\nGinapahamtang mo ang akon pagtuo nga indi ako nagaisahanon sa sini nga kalibutan.\nAng imo nawong nagasinggit sang paglaum nga mapamatian sang tanan.\n\nSa litrato nga ginhawiran ko, nakita ko ang mga smirk kag shy nga kagun-odan mo.\nAng iban nga tawo nagapangduaw lang, pero ako nagatan-aw nga daw halin sa templo.\nBiskan anhon pa nila, para sa akon ang imo nawong wala sing kapareho.\nGani pirmi ko ginabug-os ang oras para lang maglantaw kag magpasalamat sa imo.\n\nSa mga adlaw nga malain ko ang mood, ang imo nawong nagapawala sang kasubo.\nAng pagtan-aw sa imo lips nagapukaw sang gusto ko maghambal kag mag-ayo.\nAng imo nostril nga gamay nagahatag sang katahum nga wala ako nakakita pa.\nKay ang imo nawong, langga, daw atlas sang kalipay nga ginapangita ko.\n\nSa aton paglakbay, perming nagahuptok ang akon mata sa imo nga nawong.\nMaski sa kadam-an nga tawo, ikaw ang ginapili sang akon panan-aw.\nAng imo nawong nagapakita sang pagkatawo mo — malumo, matinlo, matuod.\nAng iban nga butang nagalipong, pero ang kahulugan nga dala sang imo nawong nagapabilin.\n\nKon mag-istorya ka sa akon, nagatan-aw ako kag nagapamati nga daw nagatamasa.\nAng palamangkutanon sa imo nawong nagahatag sang mga sabat nga indi kinahanglang isulat.\nAng imo mga eyebrow nagahimo sang subtle nga notation sang imo ginabatyag.\nAng imo nawong, indi lang mata kag ilong — amo ang akon pinaka paborito nga sinulat.\n\nSa kada pamangkot sang kabuhi, sa imo nawong ako nagapangita sang giya.\nBiskan subong nga simple lang ang adlaw, ang imo nawong nagabutang sang rason.\nIkaw ang portrait nga akon ginahalinan sang inspirasyon kag kusog.\nWala untat ako maglantaw kay sa imo nawong naangkon ko ang akon puluy-an.\n\nBiskan mag-uli ikaw nga puro pulong lang ang dala, ang imo nawong nagapahayag.\nMas maayo pa ang imo katahum sa picture nga ginasulat ko sa kalibutan.\nAng imo nawong nagatimawa sang entrance sa akon dughan nga wala sang permiso.\nKalain-lain ang mga anggulo, pero tanan nagasugid sang imo pagka-magnifico.\n\nKung may mga tawo nga naga-compliment, nagapanginwala ako kag nagabalik sa imo.\nWala sila kabalo nga ang pinaka importante nga ginaapresyar ko ara sa imo nawong.\nBiskan maskara ukon makeup, ang natural mo nga panan-aw tanan ginapamatian.\nIkaw lang gid ang ginapili sang akon mata sa tunga sang kadam-an nga dagway.\n\nSa pagkatulog, ginahandum ko ang imo nawong kag nagapangadyi nga magbalik ka.\nAng adlaw ko nagaayo kay may larawan nga nagapanginwala sang imo smile.\nGinapanindugan ko ang pangamuyo nga pirmi ka safe kag malipay sa adlaw mo.\nIkaw ang rason sang akon katawhay — ang imo nawong, akon haligi kag pundo.\n\nSa katapusan, indi ko mapasipala nga pirmi ka sa akon panghunahuna.\nWala untat ang tan-aw ko sa imo nawong kay ikaw ang pinakabugnaw sang akon adlaw.\nKon may wraps sang kasubo, ang imo nawong ang naga-ayo kag nagapalipay.\nDaw adlaw nga wala untat ang pagsidlak sang imo nawong sa akon kalibutan.\n\nAng akon pangako: tubtub sa ulihi, ikaw gid ang akon palangga kag art.\nIndi ko pag-untatan ang pagtamod, paghalong, kag pagtan-aw sa imo nawong.\nKay sa imo nawong, nakita ko ang tanan — kalipay, kasanag kag puluy-an.\nSalamat sa pagpa-ugyon sang akon mata sa pinaka-mahal ko nga obra.",
+        "preview": "Wala untat ang akon tan-aw sa imo nawong kada makita ta ikaw. Ang imo mga mata nagasugid sang istorya nga indi masaysay sang pulong...",
+        "tags": ["gaze", "adoration", "face", "obsession", "love"]
+    },
+    {
+        "id": 9,
+        "title": "Sa Altar nga Magkaupod",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa almiw sang piyesta sang aton kabuhi, nagalakat kita nga nagahuptok kamot.\nAng altar nagahulat sang mga hungod nga ginpatigayon sang kalag.\nDaw simbahan nga puno sang kasanag, ang aton mga mata nagatan-aw sa unahan.\nIkaw ang akon kapin-sagrado nga handum nga ginahuptan ko nga matinlo.\n\nNagpanubo ang kandila, nagasiga ang pulong sang paglaum sa aton palibot.\nAng halad nga ginahimo naton, indi lang bulak kundi mga saad nga matuod.\nSa tagsa ka hutik, ginapaambit ta ang ginhalad sang tagipusuon.\nKag ang altar nagmangin saksi — sang aton pagtilaw, paglaum, kag pag-ayo.\n\nAng simbahan nga bungbong nagaluwas sang mga tingog sang pamilya nga nagapangamuyo.\nMay mga luha nga nagasalida sa kilid sang mata pero hulbot ang kalipay.\nIkaw nagasindot sang pagtuo ko nga mas labaw pa sa bisan ano nga bagay.\nKay sa imo presensya, ang altar nagahimo sang daku nga puluy-an sang paglaum.\n\nAng mga officiant nagabasa, apang ang pinakadako nga pledge nagahalin sa aton mga mata.\nSa imo hulbot, nabatyagan ko ang pagbato nga indi maguba bisan sang bagyo.\nAng mga pulong nagatukar, pero ang pinakaimportanteng pulong nagahimo sa aton.\nNga sa sini nga tion, ang duag sang aton kasaysayan ginasulat sang kalinong.\n\nAng bulak nga ginbutang sa altar daw manual sang aton paghanda sang kabuhi.\nMay mga hugot nga ginpahayag nga indi masulat sa sulat kundi mabatyagan sa dughan.\nAng imo kamot nagunit sang akon kamot, pareho sang halad nga indi mabaklan.\nKag kami, nagapangako nga mag-atipan sang isa kag isa sa tanan nga adlaw.\n\nSa mga mata sang aton ginikanan, may paglaum kag pagsalig nga gindal-a.\nNagapangayo sang bendisyon, nagapamatuod sang kapisanan sang relasyon.\nAng mga pagsugid sang pangabuhi nagalambot sa aton sama sang balatyagon.\nKag kami nagatulayas sang malakita nga bag-ong sugilanon sa pag-upod.\n\nIndi ko pag-usaron ang malaba nga pulong, kay ang akon buot nagasiling sa imo.\nAng altar nga ina, indi lang lugar — isa ka simbolo sang aton katutom.\nAng tagsa ka hungod nagapakita sang kalipayan nga may kasanag.\nKag sa simple nga hug, nasulat naton ang isa ka bagong mapisan nga panumduman.\n\nNagpanindugan kita sang pag-ayo sang isa kag isa, sa maaot kag mahinay nga adlaw.\nAng tanan nga saksi nagapamat-od sang paglaum nga indi maghabok.\nImo pag-ako sang akon kamot nagpaalinton sang tanan nga kahadlok kag duda.\nKag ang altar nagapakita sang dalan nga magapadayon kita upod.\n\nSa paghalad sang simbahan, ang mga awit nagapahamtang sang kalinong.\nAng choir nag-akbay sang aton mga hininga, nagahatag sang himaya sa dugo.\nIkaw ang chorus sang akon kabuhi nga nagasinggit sang katahum sang pag-asa.\nKag ang altar, nagapanginwala sang kwento sang dua ka tagipusuon nga nag-upod.\n\nAng init sang adlaw nagasulod sa bintana kag nagahatag sang natural nga glorya.\nAng mga mata ko nagdanlog sa imo, nagahimo sang maski ano nga pulong sobra.\nDaw ginpintalan sang langit ang aton mga ngalan sa mapisan nga libro sang kabuhi.\nAng altar nagaserbe bilang landmark sang aton sinumpaan nga mapisan.\n\nSa kahumot sang bulak kag latagaw sang kandila, nagapanumpa kita sa pagpangabuhi.\nAng pangako indi lang pulong kundi ginahimo sa lihok kag responsibilidad.\nImo ginpukaw ang akon handum nga magtukod sang puluy-an nga may halong.\nKag sa altar, ako nagpanumpa nga maghatag sang proteksyon kag pagpalangga.\n\nBiskan indi perpekto ang aton palibot, ang altar naga-isa sang aton intensyon.\nAng simbahan, opisina, plaza—bisan diin, mahimo naton dal-on ang sinsero nga saad.\nPero diri, sa halayo nga pinggan sang kasulatan, nag-ukit ang aton kasugtanan.\nAng altar nagahatag sang solemnidad kag bug-os nga kahulugan sa aton duwa.\n\nPaghulag naton sa plaza, nagahawa ang hangin kag nagdala sang mga pahamtang.\nAng mga kamot naton nagahuptok, ang aton panumduman nagaplano sang palaabuton.\nGani sa sini nga tion, wala sing sala, kay ang tanan nakatapik sa pagtuo.\nAng altar nga sinaksihan naton, magapadayon nga magsaksi tubtob sa ulihi.\n\nAng mga sadtong nagtagpo, nagbuligay sa pagpangamuyo kag paghatag sang advice.\nAng ila mga pulong nagapangyuhum kag nagapabaskog sang aton determinasyon.\nSa ila nga suporta, ang aton union nagatulod sang mas lapad nga responsibilidad.\nKag kita nagapangako nga indi pagbiyaan ang isa kag isa sa ano man nga adlaw.\n\nSa pagpauli, nagahuptok kita sang kamot kag nagatan-aw sa altar nga malayo.\nAng kahayag sang kandila nagabuhin sa aton mga dughan sang kalinong.\nAng mga sao naton nagapabilin nga mabinuligon kag pala-ot sa buhat.\nKag sa sining dalan, ang altar nagahatag sang direksyon sang aton pag-upod.\n\nSa ulihi, ginapanumdum ko ang adlaw nga nagtalikod kita padulong sa balay.\nAng altar nagbilin sang marka sa aton kabuhi — hindi lang simbahan kundi puluy-an.\nAng pag-upod naton indi tungod sa tuman nga gala kundi tungod sang tinutuyo.\nKag subong, maski sa tanan nga test sang adlaw, handa ako magpasan sang imo kamot.",
+        "preview": "Sa almiw sang piyesta sang aton kabuhi, nagalakat kita nga nagahuptok kamot. Ang altar nagahulat sang mga hungod nga ginpatigayon sang kalag...",
+        "tags": ["altar", "union", "sacred", "commitment", "love"]
+    },
+    {
+        "id": 10,
+        "title": "Siyam ka Bulan nga Busog ang Imo Tiyan",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa una nga bulan sang imo tiyan, ginpamati ko ang gamay nga kaway.\nNagahuyop ang kalipay sa balay kag ang imo mata nagasidlak.\nAng kape namon nagakahulugan sang kadamlag, ang mga recipes nagakadugang.\nIkaw nagahanda sang pagkaon nga puno sang paghigugma kag pag-atipan.\n\nIkaw naga-obra sang soft nga playlist samtang nagatimpla sang sud-an.\nAng aroma sang sinigang kag pansit nagahalin sa kusina padulong sa sala.\nGnapaabot ko nga mag-abot ang tion sang pagkaon, samtang nagatan-aw sa imo kamot.\nAng pag-ayo mo sang pinggan daw prayer nga ginahatag mo sa ginahulat naton.\n\nSa ikatatlo ka bulan, nagapangayo kita sang vitamins kag mga health tips.\nNagabisita sa doktor nga may paglaum kag gamay nga kahadlok sa dughan.\nAng imo nawong nagapangitom kon maalalang ang list sang dapat himuon.\nPero ang imo dedikasyon para sa bata nagahatag sang dako nga paglaum sa akon.\n\nNagapanalagan ang adlaw kag ginapuno naton ang fridge sang healthy nga pagkaon.\nAng salad, prutas, kag tinapay nga maluto naton, ginahimo nga ritual.\nIkaw nagabutang sing extra nga love sa kada luto — ang bata mabatian mo man.\nKag ako, nagapanikasog magtabang sa pagpaligo kag paglimpyo sang utensils.\n\nSa ika-upat nga bulan, sudden cravings ang nagalabay kag nagadalasang katawa.\nAng popcorn sa tunga sang gab-i nagbalik-balik, kag ang imong kilay nagaliso.\nGani ginapalit naton ang extra snacks kag nagapangbakal sang comfort food.\nAng balay nagabuswak sang kalipay bisan simple lang ang mga hulbot naton.\n\nNagahimo kita sang list sang baby names, nagasal-ot sang tanan nga options.\nNagahampak ang tunga sang kagab-ihon sa pagpangita sang pinakamaayo.\nIkaw nagatan-aw sa names kag nagapanilag sang imo preference.\nKag ang akon contribution: mangin maistahanon, mabuot, kag maluyag man.\n\nSa ika-unom nga bulan, nagasugod na ang mga gentle kicks nga mabatyagan.\nAng imo nawong nagasidlak kag ang akon palad naglabay sa imo tiyan.\nAng tiny nga paglihok nagahatag sang kabuhi sa aton kasanag kag pagkahinali.\nKag sa kada kilid, nagahimakas kita sang plano kon paano siya atipan.\n\nNagaplano kita sang nursery — color swatches, crib, kag mga stuffed toys.\nAng imo paghimo sang lista sang kailangan nagapakigbahin sang gugma mo.\nAko naga-assemble sang mga kasangkapan kag nagapaniguro nga safe tanan.\nAng teamwork naton nagapakita nga indi lang kita magpartner hantod sa baby.\n\nSa ika-pito nga bulan, nagahimo kita sang mga soft photoshoots kag small parties.\nGinalakipan sang pamilya ang pagselebrar, may halakhak kag hulbot nga pagpalangga.\nAng imo mga kamot nagahuptok sang pangadyi samtang gab-i nagalabay.\nKag ako nagapangamuyo nga safe kag malipay ang tanang adlaw naton.\n\nSa ika-walo ka bulan, may panumduman sang bag-o nga rhythmic nga activity.\nNagpraktis kita sang breathing exercises kag bonding habang nagaluto.\nAng imo pagtulog medyo mabinatag tungod sa kataas sang tiyan nga nagadako.\nApang ang imo nga pag-atipan nagahimo sang tanan nga kabudlayan bilidhon.\n\nSa siyam ka bulan, nagahanda ang akon dughan sa pagbati sang dako nga unod.\nAng hospital bag naka-ready, lists naka-check, ang ruta naka-plano.\nIkaw nagatan-aw sa salamin, nagapaninguha nga maligon sa adlaw sang pag-abot.\nKag ako, nagahuptok sang imo kamot nga malum-ok, may pagkahadlok man pero handa.\n\nSa mga gab-i nga naga-huyop ang kakulba, nagapangisyas kita sing mga promises.\nNga sa tanan nga oras, indi kita magbiya, magasuporta kag magahalin sa pagpangamuyo.\nAng imo paghupot sa akong kamot nagahatag sang kalma nga wala sing balitok.\nKag ang bata sa sulod, nagakighagad sang halok sa palibot sang aton balay.\n\nAng pagkaon nga ginluto mo, indi lang nutritional kundi may seasoning sang gugma.\nGina-observe ko ang pag-ayo mo sang pinggan, pareho sang pag-ayo mo sa akon kabuhi.\nNagahimakas kita sang mga recipes nga simple pero puno sang sustansya.\nKag ang bata, daw nagasabat sa kada kutsara nga ginahapit ko kag ikaw.\n\nAng mga adlaw sang paghulat nagadulot sang makaluluoy pero matahum nga paglaum.\nNagatan-aw kita sang palaabuton nga puno sang mga pagtilaw kag mga handum.\nAng imo tiyan nga busog nagapuno sang amon balay sing halakhak kag pagpaabot.\nKag sa kada adlaw, nagapangamuyo kami nga safe kag malipay ang bata.\n\nSa pag-uli sang pinakamatinlo nga adlaw, ginpanumdum ko ang tanan naton ginbato.\nAng siyam ka bulan nga pag-atipan indi madula, kundi mangin pundasyon sang pamilya.\nAng imo pagkamaluluy-on, pagkamapinanggaon, kag pagkamadinalag-on nagapabaskog sa akon.\nKag sa tanan nga ini, akon ginahambal: salamat sa pagbusog sang aton palangga.\n\nSubong, sa tion nga magabot ang pinaka-espesyal nga segundo, handa ako mag-upod.\nIndi ko pag-ipakita ang question sa pulong; ang akon lihok magapakita sang pagtuo.\nKay sa imo, sa bata, kag sa aton palaabuton, handa ako magpanggayo sang proteksyon.\nAng siyam ka bulan naton — busog sang gugma, busog sang paglaum, busog sang kinabuhi.",
+        "preview": "Sa una nga bulan sang imo tiyan, ginpamati ko ang gamay nga kaway. Nagahuyop ang kalipay sa balay kag ang imo mata nagasidlak...",
+        "tags": ["care", "family", "love", "nurture"]
+    },
+    {
+        "id": 11,
+        "title": "Putli sa Puti kag sa Uniform",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa adlaw sang kasal, imo puti nga bisti nagaputi pa gid sa adlaw.\nPero sa adlaw sang trabaho, imo uniform may lain nga kahulugan.\nKada porma kag tikang nagapakita sang imo pagkahamtong.\n\nAng puti nga bisti daw huni sang kalinong sa kabuhi.\nPero ang uniform nagapakita sang imo kusog kag disiplina.\nPareho sila nga nagapatingala sa akon.\n\nSa puti, ikaw amo ang handum nga ginpangamuyo ko.\nSa uniform, ikaw amo ang inspirasyon nga ginapangabudlayan ko.\nWala sang isa nga mas labaw sa isa.\n\nAng imong mga mata nagakilay nga may kalinong sa puti.\nPero nagasilak sang determinasyon kon may trabaho.\nKag ini nga duha, palangga ko pareho.\n\nIndi lang ini bahin sang panapton.\nKundi bahin sang imo pagkatawo.\nNga bisan ano nga panapton ang isuksok mo, ikaw lang gihapon ang putli sa akon panan-aw.\n\nSa puti, may halok nga mahumok.\nSa uniform, may pagpatpat nga mabaskog.\nPareho nga may lambing kag respeto.\n\nIndi tanan nga tawo makakita sini nga kaangay sang akon pagkakita.\nKay ang akon panan-aw may halong nga pagpalangga.\nKag wala sang bias sa adlaw kag gab-i.\n\nAng imo kamot sa puti, daw rosas nga wala pa natandog.\nAng imo kamot sa uniform, daw sandata nga handa magdepensa.\nPareho sila nga akon ginahingabot.\n\nSa duwa ka panapton nga imo ginadala,\nIkaw gihapon ang reyna sang akon kabuhi.\nKag bisan pilion ko, indi ko mahimo.\n\nKay ang puti nagapakita sang sumpa kag saad.\nAng uniform nagapakita sang pagkabuhi sang saad.\nPareho nga may lugar sa akon tagipusuon.\n\nWala sang limit sa pagpalangga ko sa imo.\nBisan sa puti o sa uniform.\nKay indi panapton ang ginarespeto ko, kundi ang tawo nga ara sa sulod sini.\n\nIkaw ang putli nga handum kag ang uniform nga inspirasyon.\nDaw duha ka duta nga nagapadayon sa isa ka kalibutan.\nGinapalanga ko ini nga duwa ka aspeto sang imo kabuhi.\n\nBisan maglabay ang pila ka tuig kag magbag-o ang fashion.\nSa akon panan-aw, ikaw ang putli kag uniform nga indi malubad.\nKay indi ini baligya kag indi masukot sang kwarta.\n\nIkaw amo ang isa ka larawan nga indi matapos pintahan.\nKay kada adlaw, may bag-o nga puti kag bag-o nga uniform nga nagakahulugan.\nKag akon ini nga ginasaulog sa akon tagipusuon.\n\nSa ulihi, indi ini bahin sang bayo kundi sang istorya.\nAng puti kag uniform pareho nga kapitulo sang aton gugma.\nKag ako, handa magbasa sini tubtob sa katapusan.",
+        "preview": "Sa adlaw sang kasal, imo puti nga bisti nagaputi pa gid sa adlaw. Pero sa adlaw sang trabaho, imo uniform may lain nga kahulugan...",
+        "tags": ["love", "uniform", "white-dress", "commitment", "admiration"]
+    },
+    {
+        "id": 12,
+        "title": "Thesis nga Duha Ta",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Nag-abot ang adlaw nga ang research paper indi na lang papel kundi kabuhi naton.\nDuha ta nga nagasulat sang kada sentence nga may dugo kag kape.\nKada reference daw paglaum nga magdaug kita.\n\nSa kada survey nga ginapanagtag naton, ara ang imo ngisi nga nagadasig sang adlaw.\nAng analysis nga ginahimo naton indi lang para sa grado kundi para sa future nga duha naton.\nKag bisan sa pagkapoy, ara ka gihapon sa kilid ko.\n\nKada meeting nga gab-i, imo tingog ang nagapabilin nga musika sa akon dalunggan.\nNagahalin ang kakapoy kon mabatian ko ang imo mga plano.\nPareho kita nga may fear pero mas dako ang paglaum.\n\nBisan mag-crash ang laptop ukon mag-delete ang files, wala kita nagbiyaay.\nKay kabalo kita nga indi lang kita team kundi partner sa kabuhi.\nKag amo ini ang mas labaw sa tanan.\n\nSa kada presentation nga ginahimo naton, ara ang imo kaisog nga nagatindog sa tanan.\nDaw indi thesis kundi proposal sang future nga gusto naton himuon.\nKag ginakabig ko nga isa ini ka privilege nga updan ka.\n\nNagkatulog ta sa lamesa nga may draft kag kape sa tupad.\nGinmata ta nga may adlaw nga masanag kaysa kahapon.\nKag ginpadayon ta ang pag-away para matapos ini.\n\nAng thesis nga ini naghatag sang leksyon nga wala sa libro.\nAng pag-intindi, pagpasensya, kag pagpalangga sa tunga sang pressure.\nNga amo man ang kinahanglan sa kabuhi nga duha naton.\n\nIndi lang ini research kundi blueprint sang aton relasyon.\nMay introduction nga daw una naton nga kilalahay.\nMay conclusion nga daw sumpa nga magpadayon kita.\n\nKag sa adlaw nga i-defend naton ini, indi lang kita magapangabudlay para sa passing.\nKundi para ipakita nga bisan sa tanan nga kulang, puno ta sa gugma.\nKag amo ina ang pinakaimportante nga score.\n\nPagkatapos sang tanan, ang bound nga thesis indi lang obra.\nKundi pruweba nga duha ta nakalampuwas sa tanan nga problema.\nKag mas handa na mag-atubang sa mas lapad nga kabuhi.\n\nKag bisan matapos na ang school year, ang thesis nga ini magapabilin.\nKay wala ini sa library lang kundi sa aton tagipusuon.\nKag sa kada pahina niya, ara ang aton mga ngalan kag handum.\n\nGinapamat-od sini nga ang pagpalangga kag pagtinir mas mabaskog kaysa tanang deadline.\nKag nga ang partner nga ara sa imo kilid sa pressure, amo man ang partner nga ara sa imo kilid sa kalinong.\n\nSa ulihi, indi lang ini titulo nga ginreceive naton kundi life project nga natapos naton nga duha.\nKag sa masunod pa nga mga proyekto, kabalo ako nga ikaw gihapon ang akon ka-team.\nKay ang pinakaimportante nga defense, ara pa sa aton kabuhi.",
+        "preview": "Nag-abot ang adlaw nga ang research paper indi na lang papel kundi kabuhi naton. Duha ta nga nagasulat sang kada sentence nga may dugo kag kape...",
+        "tags": ["love", "thesis", "partnership", "study", "commitment"]
+    },
+    {
+        "id": 13,
+        "title": "Ginhatag ka sang Diyos sa Akon",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa una, nagapangayo lang ako sang kusog sa iya.\nWala ko gin-expect nga ihatag niya ikaw.\nPero sa pag-abot mo, nahangpan ko ang plano niya.\n\nAng imo presensya daw sabat sang dugay ko na nga pangamuyo.\nBisan indi ko masaysay ang tanan, kabalo ako nga ginhatag ka sang Diyos.\nKag indi ko ini pagpaslawon.\n\nBisan may adlaw nga masakit kag mabudlay.\nIkaw ang pahayag nga nagapasiga sa akon dalan.\nKag ang imo tingog daw kalma nga nagahatag sang paglaum.\n\nKabalo ako nga indi tanan nga gugma ginapakamaayo.\nPero ang imo gugma, may pagpakamaayo halin sa langit.\nKag wala sang lain nga makapalapit sini.\n\nSa imo kamot, mabatyagan ko ang paggiya sang Ginoo.\nSa imo mga mata, makita ko ang iya pagpalangga sa akon.\nKag sa imo mga pulong, mabatian ko ang iya tingog.\n\nIndi ka lang obra sang imo kaugalingon.\nKundi obra sang Ginoo nga may purpose.\nKag ako, isa lang ka tawo nga ginswertehan nga ginhatagan sini.\n\nSa kada adlaw nga naga-upod kita, ginapasalamatan ko siya.\nKay kabalo ako nga wala ini mahitabo kon wala ang iya pagplano.\nKag indi ko ini pag-ubrahan sang sayop.\n\nIkaw amo ang hinigugma nga indi lang akon pili kundi iya man nga pagbuot.\nKag kon ara siya sa tunga naton, wala sang indi naton malampuwasan.\n\nGinapabatyag mo nga ang gugma indi lang bahin sang kalibutan.\nKundi bahin sang langit nga ginapadala diri.\nKag ako, ginarespeto ko ina nga regalo.\n\nSa ulihi, indi lang ini istorya sang duha ta.\nKundi istorya sang Diyos nga nag-ayo sang duha ka kabuhi.\nNga subong, isa na lang nga dalan ang ginahalinan.\n\nIndi man kita perpekto.\nPero sa iya presensya, ginatadlong kita.\nKag ginatudluan nga magpalangga nga pareho sang iya pagpalangga.\n\nIkaw ang pagpakita nga ang Diyos kabalo maghatag sang eksakto nga tawo sa eksakto nga oras.\nKag ako, wala na sang mas pangitaon pa.\n\nSalamat kay ginhatag ka niya sa akon.\nKag sa iya, magapasalamat ako tubtob sa katapusan nga gininhawa ko.",
+        "preview": "Sa una, nagapangayo lang ako sang kusog sa iya. Wala ko gin-expect nga ihatag niya ikaw...",
+        "tags": ["love", "God", "gift", "faith", "gratitude"]
+    },
+    {
+        "id": 14,
+        "title": "Upod sa Ginoo",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa imo kag akon tunga, may isa nga wala naton makita pero mabatyagan.\nAng presensya sang Ginoo nga nagagiya sa aton dalan.\n\nBisan ano nga plano naton, iya gihapon ang final nga desisyon.\nPero kon iya nga plano magtugma sa aton handum, daw milagro nga natabo.\n\nNagapangamuyo kita indi lang sa malisod nga adlaw.\nKundi maski sa adlaw nga puno sang kalipay.\nKay kabalo kita nga ang iya grasya indi limitado sa problema lang.\n\nKon ara ang Ginoo sa tunga, indi maguba ang aton pundasyon.\nBisan mag-abot ang bagyo, magatindog gihapon ang aton balay.\n\nAng imo kamot sa akon kamot daw simbolo nga duha ta naga-uyon nga sundon siya.\nKag indi magliko bisan may dalan nga mas madali pero indi matarong.\n\nBisan may pagkabalaka sa palaabuton, kabalo kita nga ara siya sa unahan.\nKag iya gid kita nga pagaprotektahan halin sa mga butang nga indi para sa aton kaayohan.\n\nAng aton relasyon indi lang base sa aton kusog.\nKundi base sa kusog nga halin sa iya.\nNga amo ang nagapadayon sa aton bisan kulang kita.\n\nSa kada problema nga nagaabot, ginadumduman ta nga indi lang kita duha.\nKundi tatlo kita—ikaw, ako, kag ang Ginoo.\n\nKag kon ara siya, wala sang imposible.\nMaski ang pinakadaku nga handum, mahimo niya nga matuod.\n\nIndi ini simple nga relasyon lang.\nKundi isa ka pagpakita sang pagtuo kag pagsalig.\nNga bisan ano, indi kita magtalikod sa iya.\n\nKag sa ulihi, ang gugma nga may Ginoo sa tunga, amo ang gugma nga wala untat.\nNga bisan sa pagkadula sang isa, magapabilin pa gihapon sa langit.",
+        "preview": "Sa imo kag akon tunga, may isa nga wala naton makita pero mabatyagan. Ang presensya sang Ginoo nga nagagiya sa aton dalan...",
+        "tags": ["love", "God", "faith", "relationship", "commitment"]
+    },
+    {
+        "id": 15,
+        "title": "Ipakilala Ta Ka sa Amon",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Ginahuna-huna ko na ang adlaw nga magapakilala ta ikaw sa akon ginikanan.\nAng tagipusuon ko nagapanikad-panikad samtang ginapreparar ang pulong.\nIndi ako kahulat ipakita sa ila ang imo kahalitan kag pagkamaayo.\n\nSa lamisa, magahalad kita sang simple nga panyapon, may pagrespeto kag katahum.\nAng paborito naton nga putahe akon pagabuligan lutuon, para makita nila ang imo smile.\nImo nga hilum kag mapisan nga buot, amo ang una nga handum ko ipabatyag.\n\nGinhahanda ko ang introduction nga matinlo—wala sang drama, puro sinsero.\nMaghambal ako sang mga pulong nga nagtuhaw halin sa akon tagipusuon.\nKag sa ila nga mata, gusto ko nga makita ang pagsalig kag pagbaton.\n\nMay kahadlok pero mas dako ang paglaum nga mag-upod sa amon pamilya.\nKay ikaw, palangga, naghatag sang sense sang home sa akon tunga sang chaos.\nAng adlaw sang presentation indi lang pangako, kundi commitment sa tanan.\n\nKabalo ako nga may mga pamangkot nga magaabot, pero sabton naton sang kupkop.\nImo pagkamapisan, pagrespeto sa elders, kag pagpangamuyo ang magapamat-od.\nGani nagapraktis kita sang mga istorya nga wala sang kahuluganon nga magpangguba.\n\nAng akon pamilya daw alarmado sa newness, pero ako magahatag sang context.\nMag-asugid ako sang pila ka ginpanghimo mo nga nagpakita sang imo kindness.\nAng imo simple nga acts of love, gamay lang sa tanan pero dako sa ila pagbati.\n\nGinahulat ko ang moment nga magtindog sila kag maghimo sang blessing para sa aton.\nAng smile sang nanay ko amo ang pinaka dako nga reward nga ginahandong ko.\nKag ang pangamuyo sang tatay ko, maski simple, magahatag sang stability sa aton.\n\nKung may mga misunderstanding, magahimo kita sang space para mag-intindihanay.\nIndi naton ipilit ang tanan; hatagan naton sang tyempo ang ila pagtugot.\nKay ang pagbaton indi nagakatabo overnight—isa ka proseso sang pagtuo.\n\nAko magapanindugan sa imo kilid, magapasalig sa akon pamilya nga seryoso kita.\nAng imo pagkahamtong kag respeto sa ila magapakita sang imo pagkatawo.\nKag sa kada sugilanon nga ila pamangkuton, tubtubon naton sang kalinong.\n\nSa pamaagi sang simple nga pamahaw sa balay, magapadayon ang pag-istorya.\nAng ila mga mata magatan-aw kag unta mabatyagan ang aton sinsero nga intensyon.\nImo paghalong sa ila magahimo sang warmth nga magatipon sang amon tanan.\n\nMagahalin kita sa lamisa nga nagakupkop sang blessing kag acceptance.\nAng handshake, Padrino greeting, kag simple nga hand wave magapakita sang connection.\nAng adlaw magatapos dili sa perpekto, kundi sa tumanon nga may paglaum.\n\nSa ulihi, ang pag-ila indi lang formalidad kundi sinsero nga pag-upod sa pamilya.\nAng titulo nga 'girlfriend' ukon 'boyfriend' magbago sa 'balo' sang puluy-an.\nGina-present naton ang isa kag isa bilang future partner sang panimalay.\n\nIndi man tanan dali, pero ako nagapanumpa maghimo sang effort kada adlaw.\nAng pagpangabuhi upod sa pamilya magahatag sang mga leksyon kag kalipay.\nImo nga pagbaton kag pagrespeto sa amon, ako gid pagapasalamatan.\n\nKag sa napulo kag isa nga adlaw tubtob sa masunod pa, magapadayon kita sa pag-ayo.\nAng pagpapakilala mo sa akon pamilya isa ka milestone, indi katapusan.\nKay ang tunay nga pagsulod sa panimalay nagakinahanglan sang pagpalangga kag pagtuo.\n\nSalamat sa pag-upod sa akon sini nga lakang; handa ako magdala sa imo sa ila.\nKag sa adlaw sang introduction, magapangamuyo ako nga magturok ang acceptance.\nKay ikaw ang ginpili ko — indi lang sa akon dughan kundi ipakita ko sa akon balay.",
+        "preview": "Ginahuna-huna ko na ang adlaw nga magapakilala ta ikaw sa akon ginikanan. Ang tagipusuon...",
+        "tags": ["introduce-to-parents", "family", "commitment", "love", "ilonggo"]
+    },
+    {
+        "id": 16,
+        "title": "Kada Linya sang Kodigo iya",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Kada colon kag semicolon\nDaw pulong sang akon tagipusuon,\nGinahimo ko nga mapa,\nPadulong sa imo nga wala untat.\n\nKada variable nga ginbutang ko,\nMay ngalan nga nagapahayag sang imo,\nDaw sa loop nga wala sang katapusan,\nAng paghigugma ko indi mag-untat.\n\nFunction sang akon kabuhi,\nGinhatag lang para sa imo lang,\nAng parameter sang akon kalipay\nIkaw gid ya nga wala iban.\n\nGit commit sang akon pangabuhi,\nMay message nga \"para sa imo\",\nSa kada push kag pull sang adlaw,\nAng output ko ikaw gihapon.\n\nDebugging sang akon kalibutan,\nGinpangkuha ko ang sala,\nPero ang imo katahum\nWala gid sang bug, perpekto ya.\n\nKada line nga ginasulat ko,\nDaw tulok sang imo mata,\nNagahatag sang inspirasyon\nNga mag-code sang wala untat.\n\nSa array sang akon handum,\nIkaw ang index number one,\nKag bisan mag-loop pa sang kabuhi,\nIkaw lang gihapon ang result.\n\nAng syntax sang akon gugma,\nWala sang error bisan isa,\nPerfectly compiled sa imo kasingkasing,\nKag gin-run sang wala untat.\n\nSa database sang akon tagipusuon,\nIkaw ang primary key,\nWala sang iban nga maka-query,\nKay imo lang ini ya.\n\nAng akon algorithm sang kalipay,\nGindisenyo para sa imo lang,\nKag kada output niya\n\"Palangga ta ka\" ang resulta.\n\nWala sang break statement,\nSa loop sang aton paghigugma,\nKag bisan maabot pa kita sa infinity,\nIkaw gihapon ang ginahandum.\n\nSa mga if-else sang kabuhi ko,\nIkaw ang gina-true nga kondisyon,\nKag bisan pa sa tanan nga case,\nIkaw lang gid ang tubtob.\n\nAng object sang akon handum,\nGinhimo para sa imo lang,\nKag bisan sa inheritance sang adlaw,\nGugma ko sa imo ang magapadayon.\n\nKada variable nga gin-assign ko,\nMay value sang imo ngalan,\nKag bisan ma-reset pa ini,\nAng default niya amo ikaw.\n\nIndi ko na kinahanglan sang compiler,\nKay imo na gin-compile ang akon kabuhi,\nKag ang run sang akon tagipusuon\nPara lang sa imo nga wala untat.",
+        "preview": "Kada colon kag semicolon daw pulong sang akon tagipusuon, ginahimo ko nga mapa padulong sa imo nga wala untat...",
+        "tags": ["love", "code", "romance", "devotion", "ilonggo"]
+    },
+    {
+        "id": 17,
+        "title": "Tanda sang Singsing",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa imo kamot nga ginhawiran ko,\nMay tanda nga indi matangtang,\nDaw sumpa nga ginpirmahan\nSang duha ka tagipusuon.\n\nIndi ini pulong nga ginbubo,\nKundi isa ka pagpakita,\nNga bisan sang layu sang adlaw,\nIkaw kag ako pareho gihapon.\n\nAng singsing nga gamay lang sa mata,\nDako ang dalang kahulugan,\nIsa ini ka pirma sa bato,\nNga indi gid malimtan.\n\nKada kilat sang adlaw,\nNagadaplin sa iya kilat,\nDaw nagainggit ang adlaw\nSa kaanindot sang sumpa ta.\n\nAng porma niya, bilog nga wala untat,\nDaw gugma nga indi matapos,\nKag ang kilat sang iya gamay nga bato\nNagasabat sang akon mata.\n\nIndi niya ginasugid ang tanan,\nPero kilala sang iya metal,\nNga sa imo lang siya,\nKag sa akon lang ang sumpa.\n\nKada tulok ko sa iya,\nDaw tulok sa imo mata,\nNagapahinumdom nga ang aton\nIndi basta-basta mabungkag.\n\nBisan pa sa ulan kag bagyo,\nAng tanda magapabilin,\nKay indi niya kilala ang kahadlok,\nKon gugma ang ginadala.\n\nIndi ini pag-isipon nga bulawan lang,\nKay mas bug-at pa ini sa presyo,\nKay ginbayran ini sang saad,\nIndi lang sang kwarta.\n\nKada pikot sang imo tudlo,\nDaw gapikot man sang akon tagipusuon,\nNga indi gid ya magbulag\nSa sumpa nga ginbuksan ta.\n\nIndi ko ini gamiton para ikadena ka,\nKundi para ipakita nga\nBisan diin ka maglakat,\nAra gihapon ang akon sumpa.\n\nAng tanda sang singsing nga ini,\nIsa ka ginapainit nga kalayo,\nNga bisan sa kabugnaw sang adlaw,\nIndi magapalong.\n\nBilog siya, pero puno sang istorya,\nKag ang kada scratch niya\nGinapakita ang aton pag-antus\nPara lang magpabilin.\n\nAng singsing amo ang saksi,\nSa pagtinir ta nga duha,\nKag sa kada adlaw nga maglabay,\nMagapadayon ini magilas.\n\nWala untat nga tanda,\nKag indi mabuslan sang bisan ano,\nKay ara na sa imo kamot\nAng akon sumpa.",
+        "preview": "Sa imo kamot nga ginhawiran ko, may tanda nga indi matangtang, daw sumpa nga ginpirmahan sang duha ka tagipusuon...",
+        "tags": ["love", "engagement", "commitment", "ring", "ilonggo"]
+    },
+    {
+        "id": 18,
+        "title": "Gugma nga Layo, Pero Duol",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa layo sang imo kahimtangan,\nIndi ko mabatyagan ang distansya,\nKay kada chat kag tingog mo,\nDaw ara ka lang diri sa akon kilid.\n\nIndi kinahanglan sang eroplano,\nUkon barko nga magtabok,\nKay ang aton mga tagipusuon\nWala sang mapa nga ginatiniran.\n\nAng imo katawa,\nGapadulong sa akon dalunggan,\nDaw hangin nga nagadala\nSang mahumok nga pagpalangga.\n\nKag bisan wala ta sang litrato nga bag-o,\nAng larawan mo ara gihapon,\nNagasaylo-saylo sa akon huna-huna,\nDaw indi mabura nga pintura.\n\nSa kada gab-i nga nagakumot ako,\nDaw ara ka lang nga nagaakos,\nKag sa pagpiyong sang mata,\nIkaw ang una nga makita.\n\nAng imo mensahe, bisan gamay lang,\nDaw lapaw pa sa bisan ano nga regalo,\nKay kada pulong mo may kahulugan,\nNga ginatipigan sang akon tagipusuon.\n\nGinahulat ko ang adlaw\nNga indi na lang screen ang tunga,\nKundi kamot mo na mismo\nAng akon mahawiran.\n\nPero maski sa subong nga sitwasyon,\nIndi ko mabatyagan nga kulang,\nKay ang aton komunikasyon\nDaw tubig nga indi matuga.\n\nAng imo presensya,\nMaski virtual lang,\nMay kalayo nga ginadulot,\nNga indi malipatan sang kalibutan.\n\nKag indi ko ginapalab-ot\nAng kabudlay sang distansya,\nKay ang akon panan-aw,\nLabi pa ka duol sa imo.\n\nIndi ini kaugatan lang sang imahinasyon,\nKundi matuod nga pagpalangga,\nNga bisan layo ta,\nMay kamatuoran nga nagapadayon.\n\nSa mga adlaw nga kulang ka,\nGinapamati ko lang ang imo tingog,\nKag daw ara ka na man liwat,\nNagaistorya sang lapit.\n\nBisan pa mag-ulan,\nKag magbagyo sa tunga,\nIndi niya mapalayo ang duha ta,\nKay mas kusog ang gugma ta.\n\nSa adlaw nga mag-abot ka,\nIndi ko pagpakawalan,\nKay sobra ka na ka dugay\nNga ginapaabot.\n\nSubong, ginatipigan ko lang,\nKada moment nga may imo,\nKay ini nga layo\nMay kaangay nga katahum.\n\nAng distansya indi kaaway,\nKundi saksi sang aton paglahutay,\nNga bisan layo ang lawas,\nDuol gihapon ang tagipusuon.\n\nKag sa pag-abot sang adlaw\nNga magtupa ang imo anino sa akon kilid,\nIndi na ni mabungkag pa,\nKay nahibaloan ta nga matuod ini.",
+        "preview": "Sa layo sang imo kahimtangan indi ko mabatyagan ang distansya, kay kada chat kag tingog mo daw ara ka lang diri sa akon kilid...",
+        "tags": ["love", "long-distance", "commitment", "faithfulness", "ilonggo"]
+    },
+    {
+        "id": 19,
+        "title": "Sa Idalom sang Bulan",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Sa idalom sang bulan nga masanag,\nNagatindog kita nga duha,\nDaw wala sang iban nga tawo,\nKundi ikaw kag ako lang.\n\nAng iya kahayag,\nNagapadulong sa imo nawong,\nKag ginpinta sang adlaw\nAng imo katahum sa gab-i.\n\nIndi na kinahanglan sang kandila,\nKay ang bulan ang nagasindi,\nKag ang kahilway sang hangin\nNagapahumok sang imo tingog.\n\nKada tulok ko sa imo,\nDaw makita ko ang langit,\nNga nagapadayaw sang iya mga bituon\nPara sa imo lang.\n\nAng dalan nga ginatindugan ta,\nDaw wala sang katapusan,\nPero indi ako kahadlok,\nBasta kaupod ka.\n\nKag sa pagtan-aw ta sa ibabaw,\nAng bulan daw nagangirit,\nNga nagatan-aw sa duha ka tawo\nNga nagapalangaay.\n\nIndi na mag-untat ang akon tingog,\nSa pagpanghimo sang mga pulong,\nNga bisan hangin lang ang makabati,\nPero imo gid ya ini.\n\nAng imo kamot nga ginhawiran ko,\nMas mainit pa sa adlaw,\nBisan bugnaw ang gab-i,\nKay may kalayo nga nagadala sang kalipay.\n\nAng bulan nagasaksi,\nSa tagsa ka pulong nga ginahambal ta,\nKag ginatipigan niya ini,\nSa iya kalayo nga malumo.\n\nBisan matapos ang gab-i,\nKag magsubang na ang adlaw,\nAng kahayag sang bulan\nAra gihapon sa akon handum.\n\nKag kon magbalik pa ang gab-i,\nDiri ta liwat pagatipigan,\nAng mga saad nga ginahimo ta,\nSa idalom sang bulan.\n\nIndi niya pagkalimtan,\nAng mga katawa kag paghupay,\nKay ang bulan may iya man nga kasingkasing\nNga kilala ta gid.\n\nKag bisan pa maglabay ang pila ka tuig,\nBisan maglain ang panahon,\nAng bulan magapabilin,\nPareho sang aton gugma.\n\nSa idalom sang bulan,\nGinpirmahan ta ang kalayo nga wala untat,\nNga bisan magbugtaw ang adlaw,\nIndi ya mabungkag.\n\nKag sa sunod nga gab-i nga kaupod ka,\nMagapungko kita liwat sa sini nga lugar,\nKag magapanghimo sang istorya,\nNga bulan lang ang makasaksi.",
+        "preview": "Sa idalom sang bulan nga masanag nagatindog kita nga duha daw wala sang iban nga tawo kundi ikaw kag ako lang...",
+        "tags": ["love", "moonlight", "romance", "night", "ilonggo"]
+    },
+    {
+        "id": 20,
+        "title": "Kada Pulgada sang Akon Lawas, Iya",
+        "author": "Adriaan M. Dimate, BSCS 3-B",
+        "content": "Ang kada pulgada sang akon panit,\nMay imo ngalan nga ginapinta,\nDaw tinta nga indi matangtang,\nNga ginbilin sang imo paghigugma.\n\nSa akon agtang nga imo ginahaplos,\nAra ang kalinong nga indi mabuslan,\nKag ang kada pagtulok mo,\nNagapabilin nga kalayo sa akon sulod.\n\nAng akon abaga, imo ginpahuwayan,\nNagadala sang bug-at nga mahumok,\nKay ang kada timbang niya\nDaw bug-os nga kalipay ko.\n\nAng akon dughan, imo ginbato,\nGinasuguran sang indi matapos nga pagpalangga,\nKag kada tibok niya\nPara lang sa imo.\n\nAng akon kamot nga imo ginahawiran,\nDaw indi gusto magbuy-an,\nKay kada hawid mo,\nNagahatag sang kusog sa akon.\n\nSa akon likod nga imo ginatampokan,\nMay init nga indi mapatay,\nDaw ginapatun-an sang adlaw\nBisan gab-i.\n\nAng akon mata, imo ginapunggan,\nPara indi magtan-aw sa iban,\nKay imo lang ginabutang\nAng katahum nga akon ginatan-aw.\n\nAng akon dunggan, imo ginapasudlan,\nSang imo tingog nga mahumok,\nNga nagapadayon bisan maghilom na ang kalibutan.\n\nAng akon baba, imo ginatawhayan,\nSang mga pulong nga indi matapos,\nKag bisan indi ko masugid tanan,\nIkaw ang una nga nahibalo.\n\nSa akon dughan nga imo ginahagkan,\nMay sumpa nga ginapabilin,\nNga kada hagok ko,\nAra ang imo ngalan.\n\nAng akon hawak, imo ginapahamutangan,\nDaw ginaupod sang imo lawas,\nKag bisan mag-init ukon magbugnaw,\nAra ka gihapon.\n\nAng akon bitiis, imo ginadala,\nBisan diin kita maglakat,\nKag bisan sa kalayo sang dalan,\nAra gihapon ang imo direksyon.\n\nAng akon lutahan, imo ginapalihok,\nDaw imo mismo nga ginakontrol,\nKay bisan wala ka diri,\nIkaw gihapon ang akon giya.\n\nAng akon mga lutoy, imo ginatipigan,\nNga indi magkapoy sa pagbantay,\nKay para sa imo lang ini.\n\nKada singot nga nagatulo,\nDaw halin man sa imo kalayo,\nNga nagahatag sang inspirasyon\nNga magpadayon sa adlaw.\n\nAng akon panimuot, imo ginapanag-iyahan,\nKag wala sang lugar para sa iban,\nKay imo lang ini nga tanan.\n\nAng akon dughan nga naga-utwas,\nDaw naga-uyat sa imo ngalan,\nNga bisan magpahuway ako,\nIkaw gihapon ang ginahandum.\n\nAng akon lawas, imo ginaharian,\nIndi nga tungod sa gahum,\nKundi tungod sa gugma nga wala untat.\n\nKada pulgada sini,\nMay istorya sang aton duha,\nNga indi mabura sang panahon.\n\nKag kon mag-abot ang adlaw\nNga kaupod ta sa katapusan,\nMabalaan mo nga halin sang umpisa,\nKada pulgada sang akon lawas, imo na gid ya.",
+        "preview": "Ang kada pulgada sang akon panit may imo ngalan nga ginapinta daw tinta nga indi matangtang nga ginbilin sang imo paghigugma...",
+        "tags": ["love", "body", "devotion", "intimacy", "ilonggo"]
+    }
+
 ];
+
+// Add stanza counts to all poems
+poems.forEach(poem => {
+    poem.stanzas = countStanzas(poem.content);
+});
