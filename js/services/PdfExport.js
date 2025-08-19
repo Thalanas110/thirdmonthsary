@@ -1,10 +1,9 @@
 // PDF Export Service
 export class PdfExport {
     constructor() {
-        this.isLibraryLoaded = typeof html2canvas !== 'undefined' && typeof jsPDF !== 'undefined';
-        
+        this.isLibraryLoaded = typeof window.jspdf !== 'undefined';
         if (!this.isLibraryLoaded) {
-            console.warn('PDF export libraries not loaded');
+            console.warn('jsPDF library not loaded');
         }
     }
 
@@ -12,41 +11,27 @@ export class PdfExport {
         if (!this.isLibraryLoaded) {
             throw new Error('PDF export libraries not available');
         }
-
         try {
-            // Create temporary container for PDF content
-            const container = this.createPdfContainer(poem);
-            document.body.appendChild(container);
-
-            // Generate canvas from HTML
-            const canvas = await html2canvas(container, {
-                backgroundColor: null,
-                scale: 2, // Higher quality
-                useCORS: true,
-                allowTaint: true,
-                logging: false,
-                width: 800,
-                height: 1000
-            });
-
-            // Clean up temporary container
-            document.body.removeChild(container);
-
-            // Create PDF
-            const pdf = new jsPDF.jsPDF({
-                orientation: 'portrait',
-                unit: 'px',
-                format: [800, 1000]
-            });
-
-            // Add canvas to PDF
-            const imgData = canvas.toDataURL('image/png');
-            pdf.addImage(imgData, 'PNG', 0, 0, 800, 1000);
-
+            // Create PDF using the UMD bundle's jsPDF
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+            let y = 20;
+            pdf.setFont('Playfair Display', 'bold');
+            pdf.setFontSize(22);
+            pdf.text(this.escapeHtml(poem.title), 20, y);
+            y += 12;
+            pdf.setFont('Playfair Display', 'italic');
+            pdf.setFontSize(14);
+            pdf.text(`by ${this.escapeHtml(poem.author)}`, 20, y);
+            y += 16;
+            pdf.setFont('Inter', 'normal');
+            pdf.setFontSize(12);
+            // Split content into lines for PDF
+            const lines = pdf.splitTextToSize(poem.content, 170);
+            pdf.text(lines, 20, y);
             // Download PDF
             const filename = `${this.sanitizeFilename(poem.title)}.pdf`;
             pdf.save(filename);
-
             return filename;
         } catch (error) {
             console.error('PDF Export Error:', error);
