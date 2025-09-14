@@ -65,7 +65,7 @@ The collection includes 20 original poems covering themes such as:
 
 ## Author
 
-**Adriaan M. Dimate, BSCS 3-A**
+**Lorem Ipsum**
 
 ## License
 
